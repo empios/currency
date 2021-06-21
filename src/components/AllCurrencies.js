@@ -5,7 +5,7 @@ import Currency from "./Currency";
 function AllCurrencies() {
   const [array, setArray] = useState([]);
   useEffect(() => {
-    fetch("http://api.nbp.pl/api/exchangerates/tables/A?format=json")
+    fetch("https://api.nbp.pl/api/exchangerates/tables/A?format=json")
       .then((response) => response.json())
       .then((data) => setArray(data[0].rates));
   });
